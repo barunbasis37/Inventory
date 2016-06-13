@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inventory</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootsnip-styles.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header ng-include="'partials/nav.html'"></header>
+    
+    <div class="container-fluid main-container">
+        <div class="row">
+            <div class="col-md-2 sidebar">
+                <div class="row">
+                    <!-- uncomment code for absolute positioning tweek see top comment in css -->
+                    <div class="absolute-wrapper"> </div>
+                    <!-- Menu -->
+                    <div class="side-menu">
+                        <div ng-include="'partials/home/side-menu.tpl.html'"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 content">
+                <div ui-view></div>
+            </div>
+        </div>
+
+        <footer class="pull-left footer">
+            <p class="col-md-12">
+                <hr class="divider">
+                Copyright Code Coopers &COPY; 2016
+            </p>
+        </footer>
+    </div>
+
+    <!--<footer ng-include="'partials/footer.html'"></footer>-->
+    <!-- Scripts -->
+    <script src="Scripts/jquery-2.2.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/angular-local-storage.min.js"></script>
+
+    <!-- app scripts -->
+    <script src="App/App.Config.js"></script>
+    <!--account-->
+    <script src="App/Common/Security.Controller.js"></script>
+    <script src="App/Common/BaseService.js"></script>
+    <script src="App/Common/WebService.js"></script>
+    <script src="App/Common/UrlService.js"></script>
+    <script src="App/Common/SaveService.js"></script>
+    <script src="App/Common/SearchService.js"></script>
+    <script src="App/Common/DropdownService.js"></script>
+    <script src="App/Common/Security.Service.js"></script>
+    <script src="App/Common/SecurityLibrary.js"></script>
+    <script src="App/Common/Security.Interceptors.js"></script>
+    <script src="App/Common/RequestModels.js"></script>
+    <script src="App/Common/ResponseModels.js"></script>
+    <!--account ends-->
+    <script src="App/Directive/App.Directives.js"></script>
+
+
+<script src="App/Inventory/Models.js"></script>
+    <script src="App/Supplier/Model.js"></script>
+    <script src="App/Purchase/Model.js"></script>
+    <script src="App/Payment/Model.js"></script>
+    <script src="App/Sale/Model.js"></script>
+    <script src="App/Profile/Model.js"></script>
+    <script src="App/Customer/Model.js"></script>
+
+    <script src="App/Home/HomeController.js"></script>
+    <script src="App/Menu/SideMenuController.js"></script>
+
+    <script src="App/Inventory/InventoryControllers.js"></script>
+    <script src="App/Inventory/StockoutReportController.js"></script>
+    <script src="App/Inventory/BookmarkController.js"></script>
+    <script src="App/Inventory/StockReportController.js"></script>
+
+    <script src="App/Supplier/SupplierController.js"></script>
+    <script src="App/Supplier/SupplierHistoryController.js"></script>
+
+    <script src="App/Purchase/PurchaseController.js"></script>
+    <script src="App/Purchase/PurchaseDetailsController.js"></script>
+
+    <script src="App/Payment/PaymentController.js"></script>
+
+    <script src="App/Sale/SaleController.js"></script>
+    <script src="App/Sale/SalesReportController.js"></script>
+    <script src="App/Sale/SaleDetailsController.js"></script>
+
+    <script src="App/Profile/ProfileController.js"></script>
+
+    <script src="App/Customer/Controller.js"></script>
+    <script src="App/Customer/CustomerHistoryController.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

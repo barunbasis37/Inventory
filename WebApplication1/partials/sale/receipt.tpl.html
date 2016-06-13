@@ -1,0 +1,100 @@
+﻿<div id="receipt" class="well col-xs-12 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <address>
+                <strong>Shopper's Zone</strong>
+                <br>
+                Md. Mustafizur Rahman
+                <br>
+                Basundhara
+                <br>
+                Dhaka
+                <br>                
+            </address>
+            <p>
+                <em>{{sale.Created | date}}</em>
+            </p>
+            <p>
+                <em>Invoice #: {{sale.Memo}}</em>
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <table class="table table-hover col-xs-12 col-sm-12 col-md-12">
+            <thead>
+                <tr>
+                    <th class="col-md-9 text-center">Product</th>
+                    <th class="col-md-1 text-center">Quantity</th>
+                    <th class="col-md-1 text-center">Price</th>
+                    <th class="col-md-1 text-center">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="s in sale.SaleDetails">
+                    <td class="col-md-9"><em>{{s.ProductName}}</em></td>
+                    <td class="col-md-1" style="text-align: center">{{s.Quantity}} </td>
+                    <td class="col-md-1 text-center">{{s.Price}}</td>
+                    <td class="col-md-1 text-center">{{s.Total}}</td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td class="text-right">
+                        <p>
+                            <strong>Total: </strong>
+                        </p>
+                        <p>
+                            <strong>Discount: </strong>
+                        </p>
+                        <p>
+                            <strong>Total: </strong>
+                        </p>
+                        <p>
+                            <strong>Paid: </strong>
+                        </p>
+                        <p>
+                            <strong>Return: </strong>
+                        </p>
+                    </td>
+                    <td class="text-center">
+                        <p>
+                            <strong>{{sale.ItemTotal}}</strong>
+                        </p>
+                        <p>
+                            <strong>{{sale.Discount}}</strong>
+                        </p>
+                        <p>
+                            <strong>{{sale.Total}}</strong>
+                        </p>
+                        <p>
+                            <strong>{{sale.Paid}}</strong>
+                        </p>
+                        <p>
+                            <strong>{{sale.Return}}</strong>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td class="text-right"><h6><strong>Total: </strong></h6></td>
+                    <td class="text-center text-danger"><h6><strong>{{sale.Total}}</strong></h6></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <p>
+                Payment type: <em>{{sale.SaleType}}</em>
+            </p>             
+            <div>
+                Thank you for shopping with Shopper’s Zone
+            </div>
+        </div>
+    </div>
+</div>
+<div class="well col-xs-12 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+    <button type="button" class="btn btn-success btn-lg btn-block" ng-click="Ok()">
+        Save & Print   <span class="glyphicon glyphicon-chevron-right"></span>
+    </button>
+</div>

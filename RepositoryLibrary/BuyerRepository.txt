@@ -1,0 +1,16 @@
+﻿using System.Data.Entity;
+using Model;
+
+namespace RepositoryLibrary
+{
+    public class BuyerRepository : BaseRepository<Buyer>, IBuyerRepository
+    {
+        public BuyerRepository(DbContext db) : base(db)
+        {
+        }
+    }
+
+    public interface IBuyerRepository : IGenericRepository<Buyer>
+    {
+    }
+}

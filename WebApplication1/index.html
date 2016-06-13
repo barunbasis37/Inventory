@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inventory</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootsnip-styles.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <header ng-include="'partials/nav.html'"></header>
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">I'm a modal!</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a href="#" ng-click="$event.preventDefault(); selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            Selected: <b>{{ selected.item }}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    <div class="container-fluid main-container">
+        <div class="row">
+            <div class="col-md-2 sidebar">
+                <div class="row">
+                    <!-- uncomment code for absolute positioning tweek see top comment in css -->
+                    <div class="absolute-wrapper"> </div>
+                    <!-- Menu -->
+                    <div class="side-menu">
+                        <div ng-include="'partials/home/side-menu.tpl.html'"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 content">
+                <div ui-view></div>
+            </div>
+        </div>
+
+        <footer class="pull-left footer">
+            <p class="col-md-12">
+                <hr class="divider">
+                Copyright Code Coopers &COPY; 2016 Version 1.0.0
+            </p>
+        </footer>
+    </div>
+
+    <!--<footer ng-include="'partials/footer.html'"></footer>-->
+    <!-- Scripts -->
+    <script src="Scripts/jquery-2.2.2.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!-- angular -->
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/angular-animate.min.js"></script>
+    <script src="Scripts/angular-ui-router.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/angular-local-storage.min.js"></script>
+
+    <!-- app scripts -->
+    <script src="App.Publish/App.Config-1.0.5.min.js"></script>
+    <script src="App.Publish/App.Core-1.0.5.min.js"></script>
+    <script src="App.Publish/App.Models-1.0.5.min.js"></script>
+    <script src="App.Publish/App.Controllers-1.0.5.min.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,96 @@
+﻿using System;
+using Model;
+
+namespace ViewModel
+{
+    public class BuyerViewModel
+    {
+        public BuyerViewModel(Buyer model)
+        {
+            Id = model.Id;
+            Name = model.Name;
+            Address = model.Address;
+            City = model.City;
+            State = model.State;
+            Country = model.Country;
+            Zip = model.Zip;
+
+          
+        }
+
+        public string Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string Address { get; set; }
+
+        public string City { get; set; }
+
+        public string State { get; set; }
+
+        public string Country { get; set; }
+
+        public string Zip { get; set; }
+    }
+
+
+    public class BuyerDetailViewModel
+    {
+        public BuyerDetailViewModel(Buyer model)
+        {
+            Id = model.Id;
+            Name = model.Name;
+            Address = model.Address;
+            City = model.City;
+            State = model.State;
+            Country = model.Country;
+            Zip = model.Zip;
+            ShipAddress = model.ShipAddress;
+            ShipCity = model.ShipCity;
+            ShipCity = model.ShipCity;
+            ShipState = model.ShipState;
+            ShipZip = model.ShipZip;
+            ShipCountry = model.ShipCountry;
+
+            Created = model.Created;
+            CreatedBy = model.CreatedBy;
+            Modified = model.Modified;
+            ModifiedBy = model.ModifiedBy;
+        }
+
+        public string Id { get; set; }
+
+        public string Name { get; set; }
+
+        public string Address { get; set; }
+
+        public string City { get; set; }
+
+        public string State { get; set; }
+
+        public string Zip { get; set; }
+
+        public string Country { get; set; }
+
+        public string ShipAddress { get; set; }
+
+        public string ShipCity { get; set; }
+
+        public string ShipState { get; set; }
+
+        public string ShipZip { get; set; }
+
+        public string ShipCountry { get; set; }
+
+        public DateTime Created { get; set; }
+
+        public string CreatedBy { get; set; }
+
+        public DateTime Modified { get; set; }
+
+        public string ModifiedBy { get; set; }
+    }
+
+
+
+}

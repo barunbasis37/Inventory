@@ -1,0 +1,13 @@
+﻿<div class="panel panel-default" ng-show="vm.IsSignedIn">
+    <div class="panel-heading">
+        Welcome to home
+    </div>
+    <div class="panel-body">
+        <h1>Please call 01675245024 for more info.</h1>
+    </div>
+</div>
+<div class="row"  ng-hide="vm.IsSignedIn">
+    <h1>Welcome to Code Coopers App</h1>
+    <h2>Please call 01675245024 for more info.</h2>
+    <h3>Please <a ui-sref="root.signin">Signin</a> to use this system.</h3>
+</div>

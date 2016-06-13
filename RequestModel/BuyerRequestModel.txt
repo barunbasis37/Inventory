@@ -1,0 +1,24 @@
+﻿using System;
+using System.Linq.Expressions;
+using Model;
+
+namespace RequestModel
+{
+    public class BuyerRequestModel  : RequestModel<Buyer>
+    {
+        public BuyerRequestModel(string keyword, string orderBy, string isAscending) : base(keyword,  orderBy, isAscending)
+        {
+        }
+
+        
+        protected override Expression<Func<Buyer, bool>> GetExpression()
+        {
+            if (!string.IsNullOrWhiteSpace(Keyword))
+            {
+                ExpressionObj = x => x.Name.ToLower().Contains(Keyword) || x.Address.ToLower().Contains(Keyword);
+            }
+
+            return ExpressionObj;
+        }
+    }
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "outputFileName": "App.Publish/App.Core-1.0.5.js",
+    "inputFiles": [
+      "App/Common/Security.Controller.js",
+      "App/Common/BaseService.js",
+      "App/Common/WebService.js",
+      "App/Common/UrlService.js",
+      "App/Common/SaveService.js",
+      "App/Common/SearchService.js",
+      "App/Common/DropdownService.js",
+      "App/Common/RequestModels.js",
+      "App/Common/ResponseModels.js",
+      "App/Common/Security.Interceptors.js",
+      "App/Common/Security.Service.js",
+      "App/Common/SecurityLibrary.js",
+      "App/Directive/App.Directives.js"
+    ]
+  },
+  {
+    "outputFileName": "App.Publish/App.Config-1.0.5.js",
+    "inputFiles": [ "App/App.Config.js" ]
+  },
+  {
+    "outputFileName": "App.Publish/App.Models-1.0.5.js",
+    "inputFiles": [
+      "App/Inventory/Models.js",
+      "App/Supplier/Model.js",
+      "App/Purchase/Model.js",
+      "App/Payment/Model.js",
+      "App/Sale/Model.js",
+      "App/Profile/Model.js",
+      "App/Customer/Model.js"
+    ]
+  },
+  {
+    "outputFileName": "App.Publish/App.Controllers-1.0.5.js",
+    "inputFiles": [
+      "App/Home/HomeController.js",
+      "App/Menu/SideMenuController.js",
+
+      "App/Inventory/InventoryControllers.js",
+      "App/Inventory/StockoutReportController.js",
+      "App/Inventory/BookmarkController.js",
+      "App/Inventory/StockReportController.js",
+
+      "App/Supplier/SupplierController.js",
+      "App/Supplier/SupplierHistoryController.js",
+
+      "App/Purchase/PurchaseController.js",
+      "App/Purchase/PurchaseDetailsController.js",
+
+      "App/Payment/PaymentController.js",
+
+      "App/Sale/SaleController.js",
+      "App/Sale/SalesReportController.js",
+      "App/Sale/SaleDetailsController.js",
+
+      "App/Profile/ProfileController.js",
+
+      "App/Customer/Controller.js",
+      "App/Customer/CustomerHistoryController.js"
+    ]
+  },
+  {
+    "outputFileName": "partials.publish/sale/sales.tpl-1.0.5.html",
+    "inputFiles": [ "partials/sale/sales.tpl.html", "partials/sale/receipt.tpl.html" ]
+  }
+]

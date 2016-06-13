@@ -1,0 +1,18 @@
+﻿<nav class="navbar navbar-default" role="navigation" ng-controller="SideMenuController as vm"  ng-show="vm.IsSignedIn">
+    <!-- Main Menu -->
+    <div class="side-menu-container">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#"><span class="glyphicon glyphicon-dashboard"></span> Dashboard</a></li>
+            <li><a ui-sref="root.products"><span class="glyphicon glyphicon-plane"></span>Products</a></li>
+            <li><a ui-sref="root.suppliers"><span class="glyphicon glyphicon-plane"></span>Suppliers</a></li>
+            <li><a ui-sref="root.purchases"><span class="glyphicon glyphicon-plane"></span>Purchases</a></li>
+            <li><a ui-sref="root.payments"><span class="glyphicon glyphicon-plane"></span>Payments</a></li>
+            <li><a ui-sref="root.sales"><span class="glyphicon glyphicon-plane"></span>Sales</a></li>
+            <li><a ui-sref="root.customers"><span class="glyphicon glyphicon-plane"></span>Customers</a></li>
+            <li><a ui-sref="root.salesreport"><span class="glyphicon glyphicon-cloud"></span>Sales Report</a></li>
+            <li><a ui-sref="root.stockoutreport"><span class="glyphicon glyphicon-cloud"></span>Stock Out</a></li>
+            <li ng-show="vm.LoadSideMenu('bookmarks')"><a ui-sref="root.bookmarks"><span class="glyphicon glyphicon-bookmark"></span>Bookmarks</a></li>
+            <li ng-show="vm.LoadSideMenu('bookmarks')"><a ui-sref="root.stockreport"><span class="glyphicon glyphicon-book"></span>Stock Report</a></li>
+        </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
